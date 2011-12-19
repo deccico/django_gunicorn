@@ -1,0 +1,9 @@
+{% if latest_class_list %}
+    <ul>
+    {% for class in latest_class_list %}
+        <li><a href="/classs/{{ class.id }}/">{{ class.topic }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No classes are available.</p>
+{% endif %}
