@@ -1,3 +1,9 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+<img src="{{ STATIC_PREFIX }}img/class.jpeg" />
+
+
 {% if latest_class_list %}
     <ul>
     {% for class in latest_class_list %}

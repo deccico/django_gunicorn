@@ -43,9 +43,6 @@ server {
         root /opt/django/;
     }
     
-    location /site_media {
-        root /opt/django/;
-    }
     
     
     #location /site_media {
