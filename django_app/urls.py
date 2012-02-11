@@ -1,12 +1,6 @@
-from django.conf.urls.defaults import patterns, include, url
-
-from django.contrib import admin
-admin.autodiscover()
-
+from django.conf.urls.defaults import patterns
+from django.views.generic.simple import direct_to_template
+ 
 urlpatterns = patterns('',
-    url(r'^classes/$', 'classes.views.index'),
-    url(r'^classes/(?P<class_id>\d+)/$', 'classes.views.detail'),
-    url(r'^classes/(?P<class_id>\d+)/results/$', 'classes.views.results'),
-    url(r'^classes/(?P<class_id>\d+)/vote/$', 'classes.views.vote'),
-    url(r'^admin/', include(admin.site.urls)),
+(r'^test_static/$',             direct_to_template, {'template': 'test_static.html'}),
 )
